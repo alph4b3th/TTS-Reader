@@ -9,7 +9,7 @@ namespace TTS_Reader
         static async Task<string> ExtractText(string url)
         {
             var extractor = new WebTextExtractorService();
-            string text = await extractor.ExtractTextAsync(url);
+            string text = await extractor.ExtractTextAsync(url) ?? string.Empty;
 
             return text;
         }
@@ -20,9 +20,16 @@ namespace TTS_Reader
           
             while (true)
             {
-                Console.WriteLine("URL>>> OR exit");
-                string input = Console.ReadLine();
-                if (input.ToLower() == "exit")
+                Console.WriteLine("Insira um artigo web (URL) ou exit para encerrar:");
+                string? input = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("Escreva algo válido!");
+                    continue;
+                }
+
+                if (string.Equals(input, "exit", StringComparison.OrdinalIgnoreCase))
                 {
                     break;
                 }
