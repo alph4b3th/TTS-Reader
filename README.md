@@ -2,6 +2,12 @@
 
 > Leitor de texto para voz (Text-to-Speech) simples, elegante e focado em produtividade.
 
+
+
+https://github.com/user-attachments/assets/56120ceb-055f-4ce9-95d0-4b3f02a724f0
+
+
+
 Descrição
 ---------
 TTS-Reader é um aplicativo .NET que converte texto em fala de forma rápida e prática. Ideal para leitura de artigos, documentos ou para acessibilidade — com suporte a múltiplas vozes e configurações de velocidade e idioma.
